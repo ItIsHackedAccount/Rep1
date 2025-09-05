@@ -44,6 +44,7 @@ public:
     QAction *actionac1_2;
     QAction *actionac2_2;
     QAction *actionac1_3;
+    QAction *actionUsers;
     QWidget *centralwidget;
     QGridLayout *gridLayout;
     QStackedWidget *stackWidget1;
@@ -121,6 +122,8 @@ public:
         actionac2_2->setObjectName("actionac2_2");
         actionac1_3 = new QAction(MainWindow);
         actionac1_3->setObjectName("actionac1_3");
+        actionUsers = new QAction(MainWindow);
+        actionUsers->setObjectName("actionUsers");
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         QSizePolicy sizePolicy(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Preferred);
@@ -620,6 +623,19 @@ public:
 
         lineEdit_5 = new QLineEdit(page_2);
         lineEdit_5->setObjectName("lineEdit_5");
+        lineEdit_5->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
+"    border: 1px solid rgb(180, 180, 180);\n"
+"	background-color: rgb(208, 251, 255);\n"
+"    border-radius: 6px;\n"
+"    padding: 4px 8px;\n"
+"    font-size: 14px;\n"
+"    color: #333;\n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    border: 1px solid #0078D7;\n"
+"    background-color: #ffffff;\n"
+"}"));
 
         horizontalLayout_3->addWidget(lineEdit_5);
 
@@ -806,6 +822,8 @@ public:
         menuMenu->addAction(actionac2_2);
         menuMenu->addSeparator();
         menuMenu->addAction(actionac1_3);
+        menuMenu->addSeparator();
+        menuMenu->addAction(actionUsers);
 
         retranslateUi(MainWindow);
 
@@ -823,6 +841,7 @@ public:
         actionac1_2->setText(QCoreApplication::translate("MainWindow", "Main", nullptr));
         actionac2_2->setText(QCoreApplication::translate("MainWindow", "System monitor", nullptr));
         actionac1_3->setText(QCoreApplication::translate("MainWindow", "Param", nullptr));
+        actionUsers->setText(QCoreApplication::translate("MainWindow", "Users", nullptr));
         label_3->setText(QCoreApplication::translate("MainWindow", "Camera Status:", nullptr));
         groupBox_2->setTitle(QCoreApplication::translate("MainWindow", "Current Info View", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "Message Display", nullptr));
@@ -846,8 +865,8 @@ public:
         pushButton_6->setText(QCoreApplication::translate("MainWindow", "Refresh", nullptr));
         label_5->setText(QCoreApplication::translate("MainWindow", "User:", nullptr));
         pushButton_9->setText(QCoreApplication::translate("MainWindow", "Search", nullptr));
-        pushButton_8->setText(QCoreApplication::translate("MainWindow", "Import", nullptr));
-        pushButton_7->setText(QCoreApplication::translate("MainWindow", "Export", nullptr));
+        pushButton_8->setText(QCoreApplication::translate("MainWindow", "Export", nullptr));
+        pushButton_7->setText(QCoreApplication::translate("MainWindow", "Import", nullptr));
         menuMenu->setTitle(QCoreApplication::translate("MainWindow", "Menu", nullptr));
     } // retranslateUi
 

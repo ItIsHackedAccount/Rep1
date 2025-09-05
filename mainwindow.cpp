@@ -25,6 +25,10 @@ MainWindow::MainWindow(QWidget *parent)
         ui->stackWidget1->setCurrentIndex(2); // 切换到页面一
     });
 
+    connect(ui->actionUsers, &QAction::triggered, this, [=](){
+        ui->stackWidget1->setCurrentIndex(3); // 切换到页面一
+    });
+
 
     initDiskTableUI();
     initIPTableUI();
@@ -54,7 +58,7 @@ void MainWindow::showUsers(){
     qDebug() << "连接状态:" << b;
 
   QSqlQueryModel *model = new QSqlQueryModel(this);
-  model->setQuery("SELECT id, name, password FROM Users", obj.database());
+  model->setQuery("SELECT id, name, roles,password FROM Users", obj.database());
 
   if (model->lastError().isValid()) {
       qDebug() << "查询错误:" << model->lastError().text();
@@ -944,5 +948,49 @@ void MainWindow::on_pushButton_5_clicked()
 void MainWindow::on_pushButton_6_clicked()
 {
     initialParamTableUI();
+}
+
+
+void MainWindow::on_pushButton_9_clicked()
+{
+    QString name=ui->lineEdit_5->text();
+    QVariantMap qv=  UniversalDbManager::loadDbConfig("config.ini");
+    UniversalDbManager &obj=  UniversalDbManager::instance();
+
+
+    QSqlQuery query=   obj.query("SELECT id, name, password,roles FROM Users where name like :name",{{":name","%" + name + "%"}});
+    QSqlQueryModel *model = new QSqlQueryModel(this);
+    model->setQuery(query);
+
+    if (model->lastError().isValid()) {
+        qDebug() << "查询错误:" << model->lastError().text();
+    } else {
+        int rows = model->rowCount();
+        if (rows > 0) {
+            qDebug() << "查询到" << rows << "条数据";
+        } else {
+            qDebug() << "没有查到数据";
+        }
+    }
+    ui->tableView->setModel(model);
+
+}
+
+
+void MainWindow::on_pushButton_8_clicked()
+{
+    Tools t;
+    t.Export(ui->tableView);
+}
+
+
+void MainWindow::on_pushButton_7_clicked()
+{
+
+
+
+
+    Tools t;
+    t.Import(true,ui->tableView,"Users");
 }
 

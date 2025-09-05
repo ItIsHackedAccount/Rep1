@@ -36,7 +36,7 @@ bool UniversalDbManager::execute(const QString& sql, const QVariantMap& bindValu
     QSqlQuery query(db_);
     query.prepare(sql);
     for (auto it = bindValues.begin(); it != bindValues.end(); ++it)
-        query.bindValue(":" + it.key(), it.value());
+        query.bindValue( it.key(), it.value());
     return query.exec();
 }
 
@@ -44,7 +44,7 @@ QSqlQuery UniversalDbManager::query(const QString& sql, const QVariantMap& bindV
     QSqlQuery query(db_);
     query.prepare(sql);
     for (auto it = bindValues.begin(); it != bindValues.end(); ++it)
-        query.bindValue(":" + it.key(), it.value());
+        query.bindValue(it.key(), it.value());
     query.exec();
     return query;
 }

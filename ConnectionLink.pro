@@ -11,6 +11,7 @@ SOURCES += \
     mainwindow.cpp \
     qcustomplot.cpp \
     snap7.cpp \
+    tools.cpp \
     universaldbmanager.cpp
 
 HEADERS += \
@@ -18,6 +19,7 @@ HEADERS += \
     mainwindow.h \
     qcustomplot.h \
     snap7.h \
+    tools.h \
     universaldbmanager.h
 
 FORMS += \

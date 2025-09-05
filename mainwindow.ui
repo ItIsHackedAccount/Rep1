@@ -667,7 +667,23 @@ background-color: #0D1B2A;
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="lineEdit_5"/>
+           <widget class="QLineEdit" name="lineEdit_5">
+            <property name="styleSheet">
+             <string notr="true">QLineEdit {
+    border: 1px solid rgb(180, 180, 180);
+	background-color: rgb(208, 251, 255);
+    border-radius: 6px;
+    padding: 4px 8px;
+    font-size: 14px;
+    color: #333;
+}
+
+QLineEdit:focus {
+    border: 1px solid #0078D7;
+    background-color: #ffffff;
+}</string>
+            </property>
+           </widget>
           </item>
           <item>
            <widget class="QPushButton" name="pushButton_9">
@@ -743,7 +759,7 @@ QPushButton:pressed {
 </string>
             </property>
             <property name="text">
-             <string>Import</string>
+             <string>Export</string>
             </property>
            </widget>
           </item>
@@ -782,7 +798,7 @@ QPushButton:pressed {
 </string>
             </property>
             <property name="text">
-             <string>Export</string>
+             <string>Import</string>
             </property>
            </widget>
           </item>
@@ -873,6 +889,8 @@ QPushButton:pressed {
     <addaction name="actionac2_2"/>
     <addaction name="separator"/>
     <addaction name="actionac1_3"/>
+    <addaction name="separator"/>
+    <addaction name="actionUsers"/>
    </widget>
    <addaction name="menuMenu"/>
   </widget>
@@ -899,6 +917,11 @@ QPushButton:pressed {
   <action name="actionac1_3">
    <property name="text">
     <string>Param</string>
+   </property>
+  </action>
+  <action name="actionUsers">
+   <property name="text">
+    <string>Users</string>
    </property>
   </action>
  </widget>
