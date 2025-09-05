@@ -463,6 +463,8 @@ void MainWindow::initialCamera(){
     QCamera *camera = new QCamera(device,this);
     QMediaCaptureSession *session = new QMediaCaptureSession(this);
     QVideoWidget *video = ui->cameraWidget; // UI 中的占位控件
+    video->setAspectRatioMode(Qt::KeepAspectRatioByExpanding);
+
 
     session->setCamera(camera);
     session->setVideoOutput(video);
@@ -525,7 +527,7 @@ QPropertyAnimation *animation = new QPropertyAnimation(header, "animationProgres
    ui-> tableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
 ui->tableWidget->verticalHeader()->setVisible(false); // 隐藏行号
 
-   QStringList headers = {"小区编号", "温度 (°C)", "湿度 (%RH)", "压力 (kgf)"};
+   QStringList headers = {"No", "Temperature (°C)", "Humidity (%RH)", "Pressure (kgf)"};
   ui-> tableWidget->setColumnCount(headers.size());
   ui-> tableWidget->setHorizontalHeaderLabels(headers);
 

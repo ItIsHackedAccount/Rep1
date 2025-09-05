@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>898</width>
-    <height>631</height>
+    <width>1111</width>
+    <height>827</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -34,83 +34,18 @@ border-color: rgb(116, 248, 255);</string>
     <item row="0" column="0">
      <widget class="QStackedWidget" name="stackWidget1">
       <property name="currentIndex">
-       <number>3</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="Page1">
-       <layout class="QGridLayout" name="gridLayout_3" columnstretch="1,1,0">
-        <item row="0" column="1">
-         <widget class="QLabel" name="label_3">
-          <property name="font">
-           <font>
-            <family>Segoe UI</family>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">color: rgb(205, 221, 255);</string>
-          </property>
-          <property name="text">
-           <string>Camera Status:</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="0">
-         <widget class="QTextBrowser" name="textBrowser">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>15</pointsize>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">QTextBrowser {
-    background-color: #1E1E2F;
-}
-
-QScrollBar:vertical {
-    width: 12px;
-    background: #f0f0f0;
-    margin: 0px;
-}
-QScrollBar::handle:vertical {
-    background: #3498db;
-    min-height: 20px;
-    border-radius: 6px;
-}
-
-QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
-    background: none;
-}
-
-QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
-    background: none;
-}
-
-
-
-
-
-</string>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="0" colspan="3">
+       <layout class="QGridLayout" name="gridLayout_11" rowstretch="1,6,6,1" columnstretch="1,1,0,0">
+        <item row="2" column="0" colspan="4">
          <widget class="QGroupBox" name="groupBox_2">
           <property name="styleSheet">
            <string notr="true">    QGroupBox {
         font-size: 16px;
         font-weight: bold;
         color: rgb(205, 221, 255); /* 标题颜色 */
-        border: 1px solid gray;
+        border: 3px solid #2c3e50;  
         margin-top: 20px; /* 标题与边框距离 */
     }
 
@@ -129,33 +64,14 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
            <item row="0" column="0">
             <widget class="QTableWidget" name="tableWidget">
              <property name="styleSheet">
-              <string notr="true"/>
+              <string notr="true"> border: 3px solid #2c3e50;  </string>
              </property>
             </widget>
            </item>
           </layout>
          </widget>
         </item>
-        <item row="0" column="0">
-         <widget class="QLabel" name="label_2">
-          <property name="font">
-           <font>
-            <pointsize>20</pointsize>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">color: rgb(205, 221, 255);</string>
-          </property>
-          <property name="text">
-           <string>Message Display</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignmentFlag::AlignCenter</set>
-          </property>
-         </widget>
-        </item>
-        <item row="3" column="0" colspan="3">
+        <item row="3" column="0" colspan="4">
          <layout class="QHBoxLayout" name="horizontalLayout">
           <property name="leftMargin">
            <number>9</number>
@@ -302,34 +218,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
           </item>
          </layout>
         </item>
-        <item row="0" column="2">
-         <widget class="QLabel" name="label">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="font">
-           <font>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true"/>
-          </property>
-          <property name="text">
-           <string>TextLabel</string>
-          </property>
-          <property name="textFormat">
-           <enum>Qt::TextFormat::AutoText</enum>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignmentFlag::AlignCenter</set>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="1" colspan="2">
+        <item row="1" column="1" colspan="3">
          <widget class="QGroupBox" name="groupBox">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
@@ -348,7 +237,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
         font-size: 16px;
         font-weight: bold;
         color: rgb(205, 221, 255); /* 标题颜色 */
-        border: 1px solid gray;
+        border: 3px solid #2c3e50;  
         margin-top: 20px; /* 标题与边框距离 */
     }
 
@@ -365,10 +254,237 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
           </property>
           <layout class="QGridLayout" name="gridLayout_4">
            <item row="0" column="0">
-            <widget class="QVideoWidget" name="cameraWidget" native="true"/>
+            <widget class="QVideoWidget" name="cameraWidget" native="true">
+             <property name="styleSheet">
+              <string notr="true"> border: 3px solid #2c3e50;  </string>
+             </property>
+            </widget>
            </item>
           </layout>
          </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QGroupBox" name="groupBox_6">
+          <property name="styleSheet">
+           <string notr="true">    QGroupBox {
+        font-size: 16px;
+        font-weight: bold;
+        color: rgb(205, 221, 255); /* 标题颜色 */
+        border: 1px solid gray;
+        margin-top: 20px; /* 标题与边框距离 */
+ border: 3px solid #2c3e50;  
+    }
+
+    QGroupBox::title {
+        subcontrol-origin: margin;
+        subcontrol-position: top center; /* 标题居中 */
+        padding: 0 3px;
+        background-color: transparent;
+    }
+</string>
+          </property>
+          <property name="title">
+           <string>Log</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_3">
+           <item row="0" column="0">
+            <widget class="QTextBrowser" name="textBrowser">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="baseSize">
+              <size>
+               <width>20</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>15</pointsize>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QTextBrowser {
+    background-color: #1E1E2F;
+ border: 3px solid #2c3e50;  
+}
+
+QScrollBar:vertical {
+    width: 12px;
+    background: #f0f0f0;
+    margin: 0px;
+}
+QScrollBar::handle:vertical {
+    background: #3498db;
+    min-height: 20px;
+    border-radius: 6px;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    background: none;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background: none;
+}
+
+
+
+
+
+</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="0" column="0" colspan="3">
+         <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="30,1,1,1,1,1">
+          <item>
+           <spacer name="horizontalSpacer_4">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>9</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="tabletTracking">
+             <bool>false</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">  color: rgb(205, 221, 255);               /* 字体颜色 */
+
+</string>
+            </property>
+            <property name="text">
+             <string>User:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_6">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">  color: rgb(205, 221, 255);               /* 字体颜色 */
+    border: none;                /* 去掉边框线 */
+    border-radius: 10px;         /* 圆角半径 */
+    padding: 9px 0px;           /* 内边距 */
+</string>
+            </property>
+            <property name="text">
+             <string>null</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_5">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Policy::Preferred</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_3">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>Segoe UI</family>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(205, 221, 255);</string>
+            </property>
+            <property name="text">
+             <string>Camera Status:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>TextLabel</string>
+            </property>
+            <property name="textFormat">
+             <enum>Qt::TextFormat::AutoText</enum>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </item>
        </layout>
       </widget>
@@ -829,7 +945,7 @@ QPushButton:pressed {
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>898</width>
+     <width>1111</width>
      <height>26</height>
     </rect>
    </property>

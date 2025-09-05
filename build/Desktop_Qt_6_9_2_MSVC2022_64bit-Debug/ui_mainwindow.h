@@ -49,13 +49,10 @@ public:
     QGridLayout *gridLayout;
     QStackedWidget *stackWidget1;
     QWidget *Page1;
-    QGridLayout *gridLayout_3;
-    QLabel *label_3;
-    QTextBrowser *textBrowser;
+    QGridLayout *gridLayout_11;
     QGroupBox *groupBox_2;
     QGridLayout *gridLayout_5;
     QTableWidget *tableWidget;
-    QLabel *label_2;
     QHBoxLayout *horizontalLayout;
     QPushButton *pushButton;
     QLineEdit *lineEdit;
@@ -66,10 +63,19 @@ public:
     QLineEdit *lineEdit_3;
     QLineEdit *lineEdit_4;
     QSpacerItem *horizontalSpacer_2;
-    QLabel *label;
     QGroupBox *groupBox;
     QGridLayout *gridLayout_4;
     QVideoWidget *cameraWidget;
+    QGroupBox *groupBox_6;
+    QGridLayout *gridLayout_3;
+    QTextBrowser *textBrowser;
+    QHBoxLayout *horizontalLayout_5;
+    QSpacerItem *horizontalSpacer_4;
+    QLabel *label_2;
+    QLabel *label_6;
+    QSpacerItem *horizontalSpacer_5;
+    QLabel *label_3;
+    QLabel *label;
     QWidget *page_3;
     QVBoxLayout *verticalLayout_4;
     QGridLayout *gridLayout_2;
@@ -107,7 +113,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(898, 631);
+        MainWindow->resize(1111, 827);
         QIcon icon(QIcon::fromTheme(QIcon::ThemeIcon::AppointmentNew));
         MainWindow->setWindowIcon(icon);
         MainWindow->setStyleSheet(QString::fromUtf8("background-color: #1E1E2F;\n"
@@ -138,32 +144,179 @@ public:
         stackWidget1->setObjectName("stackWidget1");
         Page1 = new QWidget();
         Page1->setObjectName("Page1");
-        gridLayout_3 = new QGridLayout(Page1);
-        gridLayout_3->setObjectName("gridLayout_3");
-        label_3 = new QLabel(Page1);
-        label_3->setObjectName("label_3");
-        QFont font;
-        font.setFamilies({QString::fromUtf8("Segoe UI")});
-        font.setBold(true);
-        label_3->setFont(font);
-        label_3->setStyleSheet(QString::fromUtf8("color: rgb(205, 221, 255);"));
-        label_3->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+        gridLayout_11 = new QGridLayout(Page1);
+        gridLayout_11->setObjectName("gridLayout_11");
+        groupBox_2 = new QGroupBox(Page1);
+        groupBox_2->setObjectName("groupBox_2");
+        groupBox_2->setStyleSheet(QString::fromUtf8("    QGroupBox {\n"
+"        font-size: 16px;\n"
+"        font-weight: bold;\n"
+"        color: rgb(205, 221, 255); /* \346\240\207\351\242\230\351\242\234\350\211\262 */\n"
+"        border: 3px solid #2c3e50;  \n"
+"        margin-top: 20px; /* \346\240\207\351\242\230\344\270\216\350\276\271\346\241\206\350\267\235\347\246\273 */\n"
+"    }\n"
+"\n"
+"    QGroupBox::title {\n"
+"        subcontrol-origin: margin;\n"
+"        subcontrol-position: top center; /* \346\240\207\351\242\230\345\261\205\344\270\255 */\n"
+"        padding: 0 3px;\n"
+"        background-color: transparent;\n"
+"    }\n"
+""));
+        gridLayout_5 = new QGridLayout(groupBox_2);
+        gridLayout_5->setObjectName("gridLayout_5");
+        tableWidget = new QTableWidget(groupBox_2);
+        tableWidget->setObjectName("tableWidget");
+        tableWidget->setStyleSheet(QString::fromUtf8(" border: 3px solid #2c3e50;  "));
 
-        gridLayout_3->addWidget(label_3, 0, 1, 1, 1);
+        gridLayout_5->addWidget(tableWidget, 0, 0, 1, 1);
 
-        textBrowser = new QTextBrowser(Page1);
-        textBrowser->setObjectName("textBrowser");
-        QSizePolicy sizePolicy1(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Expanding);
+
+        gridLayout_11->addWidget(groupBox_2, 2, 0, 1, 4);
+
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName("horizontalLayout");
+        horizontalLayout->setContentsMargins(9, -1, 0, -1);
+        pushButton = new QPushButton(Page1);
+        pushButton->setObjectName("pushButton");
+        QSizePolicy sizePolicy1(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Fixed);
         sizePolicy1.setHorizontalStretch(0);
         sizePolicy1.setVerticalStretch(0);
-        sizePolicy1.setHeightForWidth(textBrowser->sizePolicy().hasHeightForWidth());
-        textBrowser->setSizePolicy(sizePolicy1);
+        sizePolicy1.setHeightForWidth(pushButton->sizePolicy().hasHeightForWidth());
+        pushButton->setSizePolicy(sizePolicy1);
+        QFont font;
+        font.setBold(true);
+        pushButton->setFont(font);
+        pushButton->setLayoutDirection(Qt::LayoutDirection::LeftToRight);
+        pushButton->setStyleSheet(QString::fromUtf8("color: rgb(213, 245, 255);"));
+        pushButton->setAutoRepeatDelay(304);
+        pushButton->setAutoRepeatInterval(97);
+
+        horizontalLayout->addWidget(pushButton);
+
+        lineEdit = new QLineEdit(Page1);
+        lineEdit->setObjectName("lineEdit");
+        sizePolicy1.setHeightForWidth(lineEdit->sizePolicy().hasHeightForWidth());
+        lineEdit->setSizePolicy(sizePolicy1);
+        lineEdit->setStyleSheet(QString::fromUtf8("color: rgb(219, 254, 255);"));
+
+        horizontalLayout->addWidget(lineEdit);
+
+        pushButton_4 = new QPushButton(Page1);
+        pushButton_4->setObjectName("pushButton_4");
+        pushButton_4->setFont(font);
+        pushButton_4->setStyleSheet(QString::fromUtf8("color: rgb(208, 246, 255);"));
+
+        horizontalLayout->addWidget(pushButton_4);
+
+        pushButton_2 = new QPushButton(Page1);
+        pushButton_2->setObjectName("pushButton_2");
+        pushButton_2->setFont(font);
+        pushButton_2->setStyleSheet(QString::fromUtf8("color: rgb(217, 249, 255);"));
+
+        horizontalLayout->addWidget(pushButton_2);
+
+        lineEdit_2 = new QLineEdit(Page1);
+        lineEdit_2->setObjectName("lineEdit_2");
+        lineEdit_2->setStyleSheet(QString::fromUtf8("color: rgb(212, 245, 255);"));
+
+        horizontalLayout->addWidget(lineEdit_2);
+
+        pushButton_3 = new QPushButton(Page1);
+        pushButton_3->setObjectName("pushButton_3");
+        pushButton_3->setFont(font);
+        pushButton_3->setStyleSheet(QString::fromUtf8("color: rgb(211, 241, 255);"));
+
+        horizontalLayout->addWidget(pushButton_3);
+
+        lineEdit_3 = new QLineEdit(Page1);
+        lineEdit_3->setObjectName("lineEdit_3");
+        lineEdit_3->setStyleSheet(QString::fromUtf8("color: rgb(226, 248, 255);"));
+
+        horizontalLayout->addWidget(lineEdit_3);
+
+        lineEdit_4 = new QLineEdit(Page1);
+        lineEdit_4->setObjectName("lineEdit_4");
+        lineEdit_4->setStyleSheet(QString::fromUtf8("color: rgb(222, 246, 255);"));
+
+        horizontalLayout->addWidget(lineEdit_4);
+
+        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer_2);
+
+
+        gridLayout_11->addLayout(horizontalLayout, 3, 0, 1, 4);
+
+        groupBox = new QGroupBox(Page1);
+        groupBox->setObjectName("groupBox");
+        QSizePolicy sizePolicy2(QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Preferred);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(groupBox->sizePolicy().hasHeightForWidth());
+        groupBox->setSizePolicy(sizePolicy2);
+        groupBox->setFont(font);
+        groupBox->setStyleSheet(QString::fromUtf8("    QGroupBox {\n"
+"        font-size: 16px;\n"
+"        font-weight: bold;\n"
+"        color: rgb(205, 221, 255); /* \346\240\207\351\242\230\351\242\234\350\211\262 */\n"
+"        border: 3px solid #2c3e50;  \n"
+"        margin-top: 20px; /* \346\240\207\351\242\230\344\270\216\350\276\271\346\241\206\350\267\235\347\246\273 */\n"
+"    }\n"
+"\n"
+"    QGroupBox::title {\n"
+"        subcontrol-origin: margin;\n"
+"        subcontrol-position: top center; /* \346\240\207\351\242\230\345\261\205\344\270\255 */\n"
+"        padding: 0 3px;\n"
+"        background-color: transparent;\n"
+"    }\n"
+""));
+        gridLayout_4 = new QGridLayout(groupBox);
+        gridLayout_4->setObjectName("gridLayout_4");
+        cameraWidget = new QVideoWidget(groupBox);
+        cameraWidget->setObjectName("cameraWidget");
+        cameraWidget->setStyleSheet(QString::fromUtf8(" border: 3px solid #2c3e50;  "));
+
+        gridLayout_4->addWidget(cameraWidget, 0, 0, 1, 1);
+
+
+        gridLayout_11->addWidget(groupBox, 1, 1, 1, 3);
+
+        groupBox_6 = new QGroupBox(Page1);
+        groupBox_6->setObjectName("groupBox_6");
+        groupBox_6->setStyleSheet(QString::fromUtf8("    QGroupBox {\n"
+"        font-size: 16px;\n"
+"        font-weight: bold;\n"
+"        color: rgb(205, 221, 255); /* \346\240\207\351\242\230\351\242\234\350\211\262 */\n"
+"        border: 1px solid gray;\n"
+"        margin-top: 20px; /* \346\240\207\351\242\230\344\270\216\350\276\271\346\241\206\350\267\235\347\246\273 */\n"
+" border: 3px solid #2c3e50;  \n"
+"    }\n"
+"\n"
+"    QGroupBox::title {\n"
+"        subcontrol-origin: margin;\n"
+"        subcontrol-position: top center; /* \346\240\207\351\242\230\345\261\205\344\270\255 */\n"
+"        padding: 0 3px;\n"
+"        background-color: transparent;\n"
+"    }\n"
+""));
+        gridLayout_3 = new QGridLayout(groupBox_6);
+        gridLayout_3->setObjectName("gridLayout_3");
+        textBrowser = new QTextBrowser(groupBox_6);
+        textBrowser->setObjectName("textBrowser");
+        QSizePolicy sizePolicy3(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Expanding);
+        sizePolicy3.setHorizontalStretch(0);
+        sizePolicy3.setVerticalStretch(0);
+        sizePolicy3.setHeightForWidth(textBrowser->sizePolicy().hasHeightForWidth());
+        textBrowser->setSizePolicy(sizePolicy3);
+        textBrowser->setBaseSize(QSize(20, 20));
         QFont font1;
         font1.setPointSize(15);
         font1.setBold(true);
         textBrowser->setFont(font1);
         textBrowser->setStyleSheet(QString::fromUtf8("QTextBrowser {\n"
 "    background-color: #1E1E2F;\n"
+" border: 3px solid #2c3e50;  \n"
 "}\n"
 "\n"
 "QScrollBar:vertical {\n"
@@ -191,167 +344,93 @@ public:
 "\n"
 ""));
 
-        gridLayout_3->addWidget(textBrowser, 1, 0, 1, 1);
-
-        groupBox_2 = new QGroupBox(Page1);
-        groupBox_2->setObjectName("groupBox_2");
-        groupBox_2->setStyleSheet(QString::fromUtf8("    QGroupBox {\n"
-"        font-size: 16px;\n"
-"        font-weight: bold;\n"
-"        color: rgb(205, 221, 255); /* \346\240\207\351\242\230\351\242\234\350\211\262 */\n"
-"        border: 1px solid gray;\n"
-"        margin-top: 20px; /* \346\240\207\351\242\230\344\270\216\350\276\271\346\241\206\350\267\235\347\246\273 */\n"
-"    }\n"
-"\n"
-"    QGroupBox::title {\n"
-"        subcontrol-origin: margin;\n"
-"        subcontrol-position: top center; /* \346\240\207\351\242\230\345\261\205\344\270\255 */\n"
-"        padding: 0 3px;\n"
-"        background-color: transparent;\n"
-"    }\n"
-""));
-        gridLayout_5 = new QGridLayout(groupBox_2);
-        gridLayout_5->setObjectName("gridLayout_5");
-        tableWidget = new QTableWidget(groupBox_2);
-        tableWidget->setObjectName("tableWidget");
-        tableWidget->setStyleSheet(QString::fromUtf8(""));
-
-        gridLayout_5->addWidget(tableWidget, 0, 0, 1, 1);
+        gridLayout_3->addWidget(textBrowser, 0, 0, 1, 1);
 
 
-        gridLayout_3->addWidget(groupBox_2, 2, 0, 1, 3);
+        gridLayout_11->addWidget(groupBox_6, 1, 0, 1, 1);
+
+        horizontalLayout_5 = new QHBoxLayout();
+        horizontalLayout_5->setObjectName("horizontalLayout_5");
+        horizontalSpacer_4 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_5->addItem(horizontalSpacer_4);
 
         label_2 = new QLabel(Page1);
         label_2->setObjectName("label_2");
+        QSizePolicy sizePolicy4(QSizePolicy::Policy::Fixed, QSizePolicy::Policy::Preferred);
+        sizePolicy4.setHorizontalStretch(0);
+        sizePolicy4.setVerticalStretch(0);
+        sizePolicy4.setHeightForWidth(label_2->sizePolicy().hasHeightForWidth());
+        label_2->setSizePolicy(sizePolicy4);
         QFont font2;
-        font2.setPointSize(20);
+        font2.setPointSize(9);
         font2.setBold(true);
         label_2->setFont(font2);
-        label_2->setStyleSheet(QString::fromUtf8("color: rgb(205, 221, 255);"));
-        label_2->setAlignment(Qt::AlignmentFlag::AlignCenter);
+        label_2->setTabletTracking(false);
+        label_2->setStyleSheet(QString::fromUtf8("  color: rgb(205, 221, 255);               /* \345\255\227\344\275\223\351\242\234\350\211\262 */\n"
+"\n"
+""));
+        label_2->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
 
-        gridLayout_3->addWidget(label_2, 0, 0, 1, 1);
+        horizontalLayout_5->addWidget(label_2);
 
-        horizontalLayout = new QHBoxLayout();
-        horizontalLayout->setObjectName("horizontalLayout");
-        horizontalLayout->setContentsMargins(9, -1, 0, -1);
-        pushButton = new QPushButton(Page1);
-        pushButton->setObjectName("pushButton");
-        QSizePolicy sizePolicy2(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Fixed);
-        sizePolicy2.setHorizontalStretch(0);
-        sizePolicy2.setVerticalStretch(0);
-        sizePolicy2.setHeightForWidth(pushButton->sizePolicy().hasHeightForWidth());
-        pushButton->setSizePolicy(sizePolicy2);
+        label_6 = new QLabel(Page1);
+        label_6->setObjectName("label_6");
+        sizePolicy4.setHeightForWidth(label_6->sizePolicy().hasHeightForWidth());
+        label_6->setSizePolicy(sizePolicy4);
+        label_6->setFont(font);
+        label_6->setStyleSheet(QString::fromUtf8("  color: rgb(205, 221, 255);               /* \345\255\227\344\275\223\351\242\234\350\211\262 */\n"
+"    border: none;                /* \345\216\273\346\216\211\350\276\271\346\241\206\347\272\277 */\n"
+"    border-radius: 10px;         /* \345\234\206\350\247\222\345\215\212\345\276\204 */\n"
+"    padding: 9px 0px;           /* \345\206\205\350\276\271\350\267\235 */\n"
+""));
+        label_6->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        horizontalLayout_5->addWidget(label_6);
+
+        horizontalSpacer_5 = new QSpacerItem(0, 0, QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_5->addItem(horizontalSpacer_5);
+
+        label_3 = new QLabel(Page1);
+        label_3->setObjectName("label_3");
+        sizePolicy4.setHeightForWidth(label_3->sizePolicy().hasHeightForWidth());
+        label_3->setSizePolicy(sizePolicy4);
         QFont font3;
+        font3.setFamilies({QString::fromUtf8("Segoe UI")});
         font3.setBold(true);
-        pushButton->setFont(font3);
-        pushButton->setLayoutDirection(Qt::LayoutDirection::LeftToRight);
-        pushButton->setStyleSheet(QString::fromUtf8("color: rgb(213, 245, 255);"));
-        pushButton->setAutoRepeatDelay(304);
-        pushButton->setAutoRepeatInterval(97);
+        label_3->setFont(font3);
+        label_3->setStyleSheet(QString::fromUtf8("color: rgb(205, 221, 255);"));
+        label_3->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
 
-        horizontalLayout->addWidget(pushButton);
-
-        lineEdit = new QLineEdit(Page1);
-        lineEdit->setObjectName("lineEdit");
-        sizePolicy2.setHeightForWidth(lineEdit->sizePolicy().hasHeightForWidth());
-        lineEdit->setSizePolicy(sizePolicy2);
-        lineEdit->setStyleSheet(QString::fromUtf8("color: rgb(219, 254, 255);"));
-
-        horizontalLayout->addWidget(lineEdit);
-
-        pushButton_4 = new QPushButton(Page1);
-        pushButton_4->setObjectName("pushButton_4");
-        pushButton_4->setFont(font3);
-        pushButton_4->setStyleSheet(QString::fromUtf8("color: rgb(208, 246, 255);"));
-
-        horizontalLayout->addWidget(pushButton_4);
-
-        pushButton_2 = new QPushButton(Page1);
-        pushButton_2->setObjectName("pushButton_2");
-        pushButton_2->setFont(font3);
-        pushButton_2->setStyleSheet(QString::fromUtf8("color: rgb(217, 249, 255);"));
-
-        horizontalLayout->addWidget(pushButton_2);
-
-        lineEdit_2 = new QLineEdit(Page1);
-        lineEdit_2->setObjectName("lineEdit_2");
-        lineEdit_2->setStyleSheet(QString::fromUtf8("color: rgb(212, 245, 255);"));
-
-        horizontalLayout->addWidget(lineEdit_2);
-
-        pushButton_3 = new QPushButton(Page1);
-        pushButton_3->setObjectName("pushButton_3");
-        pushButton_3->setFont(font3);
-        pushButton_3->setStyleSheet(QString::fromUtf8("color: rgb(211, 241, 255);"));
-
-        horizontalLayout->addWidget(pushButton_3);
-
-        lineEdit_3 = new QLineEdit(Page1);
-        lineEdit_3->setObjectName("lineEdit_3");
-        lineEdit_3->setStyleSheet(QString::fromUtf8("color: rgb(226, 248, 255);"));
-
-        horizontalLayout->addWidget(lineEdit_3);
-
-        lineEdit_4 = new QLineEdit(Page1);
-        lineEdit_4->setObjectName("lineEdit_4");
-        lineEdit_4->setStyleSheet(QString::fromUtf8("color: rgb(222, 246, 255);"));
-
-        horizontalLayout->addWidget(lineEdit_4);
-
-        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
-
-        horizontalLayout->addItem(horizontalSpacer_2);
-
-
-        gridLayout_3->addLayout(horizontalLayout, 3, 0, 1, 3);
+        horizontalLayout_5->addWidget(label_3);
 
         label = new QLabel(Page1);
         label->setObjectName("label");
-        QSizePolicy sizePolicy3(QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Preferred);
-        sizePolicy3.setHorizontalStretch(0);
-        sizePolicy3.setVerticalStretch(0);
-        sizePolicy3.setHeightForWidth(label->sizePolicy().hasHeightForWidth());
-        label->setSizePolicy(sizePolicy3);
-        label->setFont(font3);
+        sizePolicy4.setHeightForWidth(label->sizePolicy().hasHeightForWidth());
+        label->setSizePolicy(sizePolicy4);
+        label->setFont(font);
         label->setStyleSheet(QString::fromUtf8(""));
         label->setTextFormat(Qt::TextFormat::AutoText);
         label->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
-        gridLayout_3->addWidget(label, 0, 2, 1, 1);
+        horizontalLayout_5->addWidget(label);
 
-        groupBox = new QGroupBox(Page1);
-        groupBox->setObjectName("groupBox");
-        sizePolicy3.setHeightForWidth(groupBox->sizePolicy().hasHeightForWidth());
-        groupBox->setSizePolicy(sizePolicy3);
-        groupBox->setFont(font3);
-        groupBox->setStyleSheet(QString::fromUtf8("    QGroupBox {\n"
-"        font-size: 16px;\n"
-"        font-weight: bold;\n"
-"        color: rgb(205, 221, 255); /* \346\240\207\351\242\230\351\242\234\350\211\262 */\n"
-"        border: 1px solid gray;\n"
-"        margin-top: 20px; /* \346\240\207\351\242\230\344\270\216\350\276\271\346\241\206\350\267\235\347\246\273 */\n"
-"    }\n"
-"\n"
-"    QGroupBox::title {\n"
-"        subcontrol-origin: margin;\n"
-"        subcontrol-position: top center; /* \346\240\207\351\242\230\345\261\205\344\270\255 */\n"
-"        padding: 0 3px;\n"
-"        background-color: transparent;\n"
-"    }\n"
-""));
-        gridLayout_4 = new QGridLayout(groupBox);
-        gridLayout_4->setObjectName("gridLayout_4");
-        cameraWidget = new QVideoWidget(groupBox);
-        cameraWidget->setObjectName("cameraWidget");
+        horizontalLayout_5->setStretch(0, 30);
+        horizontalLayout_5->setStretch(1, 1);
+        horizontalLayout_5->setStretch(2, 1);
+        horizontalLayout_5->setStretch(3, 1);
+        horizontalLayout_5->setStretch(4, 1);
+        horizontalLayout_5->setStretch(5, 1);
 
-        gridLayout_4->addWidget(cameraWidget, 0, 0, 1, 1);
+        gridLayout_11->addLayout(horizontalLayout_5, 0, 0, 1, 3);
 
-
-        gridLayout_3->addWidget(groupBox, 1, 1, 1, 2);
-
-        gridLayout_3->setColumnStretch(0, 1);
-        gridLayout_3->setColumnStretch(1, 1);
+        gridLayout_11->setRowStretch(0, 1);
+        gridLayout_11->setRowStretch(1, 6);
+        gridLayout_11->setRowStretch(2, 6);
+        gridLayout_11->setRowStretch(3, 1);
+        gridLayout_11->setColumnStretch(0, 1);
+        gridLayout_11->setColumnStretch(1, 1);
         stackWidget1->addWidget(Page1);
         page_3 = new QWidget();
         page_3->setObjectName("page_3");
@@ -603,9 +682,6 @@ public:
         horizontalLayout_3->setObjectName("horizontalLayout_3");
         label_5 = new QLabel(page_2);
         label_5->setObjectName("label_5");
-        QSizePolicy sizePolicy4(QSizePolicy::Policy::Fixed, QSizePolicy::Policy::Preferred);
-        sizePolicy4.setHorizontalStretch(0);
-        sizePolicy4.setVerticalStretch(0);
         sizePolicy4.setHeightForWidth(label_5->sizePolicy().hasHeightForWidth());
         label_5->setSizePolicy(sizePolicy4);
         label_5->setStyleSheet(QString::fromUtf8("\n"
@@ -772,7 +848,7 @@ public:
         MainWindow->setStatusBar(statusbar);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 898, 26));
+        menubar->setGeometry(QRect(0, 0, 1111, 26));
         menubar->setStyleSheet(QString::fromUtf8("\n"
 "    QMenuBar {\n"
 "        background-color: #1E1E2F;\n"
@@ -794,7 +870,7 @@ public:
 "    }"));
         menuMenu = new QMenu(menubar);
         menuMenu->setObjectName("menuMenu");
-        menuMenu->setFont(font3);
+        menuMenu->setFont(font);
         menuMenu->setStyleSheet(QString::fromUtf8("        QMenu {\n"
 "            background-color: #1E1E2F;\n"
 "            color: white;\n"
@@ -827,7 +903,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        stackWidget1->setCurrentIndex(3);
+        stackWidget1->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -842,9 +918,7 @@ public:
         actionac2_2->setText(QCoreApplication::translate("MainWindow", "System monitor", nullptr));
         actionac1_3->setText(QCoreApplication::translate("MainWindow", "Param", nullptr));
         actionUsers->setText(QCoreApplication::translate("MainWindow", "Users", nullptr));
-        label_3->setText(QCoreApplication::translate("MainWindow", "Camera Status:", nullptr));
         groupBox_2->setTitle(QCoreApplication::translate("MainWindow", "Current Info View", nullptr));
-        label_2->setText(QCoreApplication::translate("MainWindow", "Message Display", nullptr));
         pushButton->setText(QCoreApplication::translate("MainWindow", "CONNECT", nullptr));
 #if QT_CONFIG(tooltip)
         lineEdit->setToolTip(QString());
@@ -856,8 +930,12 @@ public:
         pushButton_3->setText(QCoreApplication::translate("MainWindow", "Write", nullptr));
         lineEdit_3->setPlaceholderText(QCoreApplication::translate("MainWindow", "DB,StartAddress", nullptr));
         lineEdit_4->setPlaceholderText(QCoreApplication::translate("MainWindow", "DATA", nullptr));
-        label->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
         groupBox->setTitle(QCoreApplication::translate("MainWindow", "Camera", nullptr));
+        groupBox_6->setTitle(QCoreApplication::translate("MainWindow", "Log", nullptr));
+        label_2->setText(QCoreApplication::translate("MainWindow", "User:", nullptr));
+        label_6->setText(QCoreApplication::translate("MainWindow", "null", nullptr));
+        label_3->setText(QCoreApplication::translate("MainWindow", "Camera Status:", nullptr));
+        label->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
         groupBox_4->setTitle(QCoreApplication::translate("MainWindow", "IP,Port Used", nullptr));
         groupBox_3->setTitle(QCoreApplication::translate("MainWindow", "Disk usage", nullptr));
         label_4->setText(QCoreApplication::translate("MainWindow", "Param setting", nullptr));
