@@ -7,6 +7,7 @@ RC_ICONS = favicon.ico
 
 SOURCES += \
     cpumonitor.cpp \
+    login.cpp \
     main.cpp \
     mainwindow.cpp \
     qcustomplot.cpp \
@@ -16,6 +17,7 @@ SOURCES += \
 
 HEADERS += \
     cpumonitor.h \
+    login.h \
     mainwindow.h \
     qcustomplot.h \
     snap7.h \
@@ -23,6 +25,7 @@ HEADERS += \
     universaldbmanager.h
 
 FORMS += \
+    login.ui \
     mainwindow.ui
 
 INCLUDEPATH += path/to/qcustomplot

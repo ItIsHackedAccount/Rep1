@@ -36,7 +36,7 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
+    MainWindow(QString userName=nullptr,QWidget *parent = nullptr);
     ~MainWindow();
 
 private slots:
@@ -95,19 +95,13 @@ void initIPTableUI();
 void initialParamTableUI();
     void saveParams();
 void showUsers();
-
+    QString userName;
 
 
 
 };
 #endif// MAINWINDOW_H
-class Test{
-public:Test();
-    ~Test();
 
-
-
-};
 
 #ifndef FANCYHEADER_H
 #define FANCYHEADER_H

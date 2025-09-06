@@ -6,9 +6,9 @@
 
 
 
-MainWindow::MainWindow(QWidget *parent)
+MainWindow::MainWindow(QString userName,QWidget *parent)
     : QMainWindow(parent)
-    , ui(new Ui::MainWindow), client(nullptr), chartInitialized(false)
+    , ui(new Ui::MainWindow), client(nullptr), chartInitialized(false),userName(userName)
 {
     ui->setupUi(this);
 
@@ -45,6 +45,7 @@ MainWindow::MainWindow(QWidget *parent)
          setDiskTable();
     });
     timer->start(1000);  // 每秒刷新一次
+  ui->label_6->setText(userName);
 
 }
 
@@ -680,11 +681,21 @@ void MainWindow::on_pushButton_clicked()
 
 void MainWindow::closeEvent(QCloseEvent *event)
 {
-    int ret = QMessageBox::question(this,
-                                    tr("quit"),
-                                    tr("quit confirmation？"),
-                                    QMessageBox::Yes | QMessageBox::No,
-                                    QMessageBox::No);
+    QMessageBox msgBox;
+    msgBox.setWindowTitle(tr("quit"));
+    msgBox.setText(tr("Quit confirmation？"));
+    msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
+    msgBox.setDefaultButton(QMessageBox::No);
+
+    // 设置样式表
+    msgBox.setStyleSheet(
+        "QMessageBox { background-color: #2E3B4E; color: white; }"
+        "QLabel { color: white; font-size: 14px; }"
+        "QPushButton { background-color: #4CAF50; color: white; border-radius: 4px; padding: 4px 10px; }"
+        "QPushButton:hover { background-color: #45a049; }"
+        );
+
+    int ret = msgBox.exec();
 
     if (ret == QMessageBox::Yes) {
         if(client){
