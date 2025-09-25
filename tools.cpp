@@ -80,7 +80,7 @@ void Tools::Import(bool useDatabase,QTableView* tableView,QString tableName) {
     file.close();
 
     if (useDatabase&&!tableName.isNull()) {
-        QVariantMap qv=  UniversalDbManager::loadDbConfig("config.ini");
+      //  QVariantMap qv=  UniversalDbManager::loadDbConfig("config.ini");
         UniversalDbManager &obj=  UniversalDbManager::instance();
         for (const QStringList& row : rows) {
             QVariantMap params;
